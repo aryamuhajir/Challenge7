@@ -13,17 +13,21 @@
         android:layout_height="wrap_content"
         android:text="@string/welcome"
         android:textColor="@color/black"
+        android:hint="free"
         android:textSize="20sp" />
+
     <ImageButton
         android:id="@+id/btnFavorite"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginEnd="10dp"
-
         android:layout_toStartOf="@id/btnProfil"
-        android:background="@drawable/ic_baseline_star_24" />
+
+        android:background="@drawable/ic_baseline_star_border_24"
+       />
 
     <TextView
+        android:id="@+id/txtNama"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
@@ -31,7 +35,6 @@
         android:text="nama"
         android:textColor="@color/black"
         android:textSize="20sp"
-        android:id="@+id/txtNama"
         android:textStyle="bold" />
 
     <ImageButton

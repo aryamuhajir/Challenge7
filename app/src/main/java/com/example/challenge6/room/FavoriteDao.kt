@@ -18,8 +18,8 @@ interface FavoriteDao {
     fun cekFilm(id: String, email : String) :Int
 
 
-    @Query("DELETE FROM Favorite WHERE id = :id")
-    suspend fun deleteFavoriteFilmById(id: String)
+    @Query("DELETE FROM Favorite WHERE id = :id AND email = :email")
+     fun deleteFavoriteFilmById(id: String, email: String)
 
 
 }

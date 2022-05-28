@@ -53,7 +53,7 @@ class ViewModelFav @Inject constructor(private val repository : FavoriteReposito
     }
     fun deleteFavLive(id : String, email: String){
         viewModelScope.launch {
-            repository.deleteFavRepo(id)
+            repository.deleteFavRepo(id, email)
             delay(2000)
             getAllFavLive(email)
 

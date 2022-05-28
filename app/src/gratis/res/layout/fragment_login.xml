@@ -15,15 +15,25 @@
         android:layout_margin="20dp">
 
         <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="50sp"
+        android:layout_marginStart="30dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:id="@+id/txL"
+        android:text="@string/login"
+        android:layout_marginTop="30dp"/>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="50sp"
-            android:layout_marginStart="30dp"
+            android:textSize="16sp"
+            android:layout_marginStart="33dp"
             android:textColor="@color/white"
             android:textStyle="bold"
-            android:text="@string/login"
-            android:id="@+id/txL"
-            android:layout_marginTop="30dp"/>
+            android:layout_below="@id/txL"
+            android:text="Free version"
+            android:layout_marginTop="3dp"/>
 
 
 

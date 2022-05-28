@@ -15,8 +15,8 @@ class FavoriteRepository  @Inject constructor(private val dao: FavoriteDao) {
         dao.insertFavorite(fav)
 
     }
-    suspend fun deleteFavRepo(id: String){
-        dao.deleteFavoriteFilmById(id)
+    suspend fun deleteFavRepo(id: String, email: String){
+        dao.deleteFavoriteFilmById(id, email)
     }
     suspend fun cekRepo(id : String, email: String) : Int {
         return dao.cekFilm(id, email)

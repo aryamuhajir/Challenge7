@@ -56,10 +56,19 @@ class HomeFragment : Fragment() {
             txtNama.text = it
         }
         btnFavorite.setOnClickListener {
-            view?.findNavController()?.navigate(R.id.action_homeFragment_to_favoriteFragment)
+            if(welcome.hint.equals("premium")){
+                view?.findNavController()?.navigate(R.id.action_homeFragment_to_favoriteFragment)
+            }else{
+                val customDialog = LayoutInflater.from(requireContext()).inflate(R.layout.custom_dialog_lock, null)
+                val dialog = androidx.appcompat.app.AlertDialog.Builder(requireContext())
+                    .setView(customDialog)
+                    .create()
+                dialog.show()
+            }
         }
         btnProfil.setOnClickListener {
             view?.findNavController()?.navigate(R.id.action_homeFragment_to_profileFragment)
+
 
         }
 
